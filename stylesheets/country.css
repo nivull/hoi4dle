@@ -1,0 +1,123 @@
+:root{
+    --background-color: #050505;
+    --text-color: #ffffff;
+    --primary-color: #fadeb9;
+    --info-text: #a0a0a0;
+    --secondary-color: #1a1a1a;
+    --selected-color: #272727;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    gap: 5vh;
+}
+
+#subtitle{
+    margin-top: -10vh;
+}
+
+.bg-img{
+    height: 100vh;
+    position:absolute;
+    opacity: 0.1;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+html{
+    overflow: hidden;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.titlebox{
+    font-size: 6rem;
+    margin-top: 2rem;
+    transition: 0.2s ease-in-out;
+    color: var(--primary-color);
+}
+
+.titlebox:hover{
+    cursor: pointer;
+    animation: 0.2s ease-in-out;
+    transform: scale(1.08);
+}
+
+#input-bar{
+    height: 1.7rem;
+    background-color: var(--secondary-color);
+    width: 100%;
+    color: var(--text-color);
+    box-sizing: border-box;
+    border: solid 1px var(--info-text);
+    margin-top: -0.9rem;
+    font-size: 1rem;
+}
+
+#input-bar:focus{
+    outline: none;
+}
+
+#input-zone{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+#countries{
+    display: flex;
+    flex: 1;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100px;
+    overflow-y: auto;
+    padding: 0;
+    font-size: 1rem;
+    gap: 0.05em;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    border: solid 1px var(--info-text);
+}
+
+::-webkit-scrollbar{
+    width: 0.3em;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 100vh;
+}
+
+li{
+    width: 99%;
+    list-style-type: none;
+    justify-content: left;
+    text-align: left;
+    padding-block: 0.3em;
+    padding-inline: 0.4em;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+
+li:hover{
+    background-color: var(--selected-color);
+}
+

@@ -10,7 +10,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 500px;
+    width: 100%;
+    gap: 5vh;
 }
+
 
 .bg-img{
     height: 100vh;
@@ -18,39 +22,49 @@
     opacity: 0.1;
     top: 0;
     z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 body{
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .titlebox{
     font-size: 6rem;
     margin-top: 2rem;
-    flex-grow: 0;
     transition: 0.2s ease-in-out;
-    position: fixed;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 .titlebox:hover{
     cursor: pointer;
     animation: 0.2s ease-in-out;
-    font-size: 6.5rem;
+    transform: scale(1.08);
 }
 
 .content{
     display: flex;
     flex-direction: column;
-    margin-top: 25vh;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    width: 100%;
 
 }
 
 .option{
-    padding: 1.5rem 2rem 1rem 2rem;
+    padding: 1.5rem 0rem 1rem 0rem;
     background-color: var(--secondary-color);
     border: solid 3px var(--text-color);
     display: flex;
@@ -60,6 +74,7 @@ body{
     gap: 0.5rem;
     cursor: pointer;
     transition: 0.1s ease-in-out;
+    width: 95%;
 }
 
 .option:hover{

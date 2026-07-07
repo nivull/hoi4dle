@@ -1,26 +1,35 @@
-let data;
 const list = document.getElementById('countries');
+const inputbar = document.getElementById("input-bar");
+const selectionZone = document.getElementById("countries");
 async function loadData() {
-  const response = await fetch('./scripts/countries.json');
-  data = await response.json();
+    //set up loaded signal thing
+    window.countryDataPromise = new Promise((resolve) => {
+        window.resolveData = resolve;
+    });
+        const response = await fetch('./scripts/countries.json');
+        window.countryData = await response.json();
+        //data done loadin
+        window.resolveData();
 }
 
 loadData();
-const inputbar = document.getElementById("input-bar");
+
 
 inputbar.addEventListener('input', (event)=> {
+    if(event.inputType == 'deleteContentBackward') {
+        selectionZone.style.visibility = 'hidden';
+    }
     list.replaceChildren();
     if(event.target.value != ''){
         findMatching(event.target.value);
-    } else {
-
     }
+
 });
 
 function findMatching(input) {
 
     let first = [];
-    const matching = data.filter((elem)=> {
+    const matching = countryData.filter((elem)=> {
 
         if(elem.country.toLowerCase().includes(input.toLowerCase())) {
             //if first letter
@@ -35,18 +44,36 @@ function findMatching(input) {
 
     });
     
-    updateSelection(first.sort());
-    updateSelection(matching.sort());
+    updateSelection(first.sort(), input);
+    updateSelection(matching.sort(), input);
     
     }
 
+function updateSelection(matching, input) {
 
-function updateSelection(matching) {
+    console.log(matching)
+    if(matching.length == 0) {
+        selectionZone.style.visibility = "hidden";
+    }
+    else {
+        selectionZone.style.visibility = "visible";
+        for(let x of matching) {
 
-    for(let x of matching) {
-        const li = document.createElement('li');
-        li.innerHTML = `<li>${x.country}</li>`;
-        list.appendChild(li);
+            const regex = new RegExp(input, 'gi');
+            const processedWord = x.country.replace(regex, `<b>$&</b>`);
+            console.log(processedWord)
 
+
+
+            const li = document.createElement('li');
+            li.className= "selectionOption";
+            li.innerHTML = `<li>${processedWord}</li>`
+            li.addEventListener('click', (event) => {
+                window.selected = event.target.textContent;
+                //console.log(window.selected);
+            })
+            list.appendChild(li);
+            console.log(li.outerHTML)
+    }
     }
 }

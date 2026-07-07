@@ -1,0 +1,21 @@
+[
+    {
+        "country": "German Reich",
+        "borders": ["Denmark", "Netherlands", "France", 
+        "Lithuania", "Czechoslovakia", "Belgium", "Luxembourg",
+         "Austria", "Switzerland", "Poland"]
+
+    },
+
+    {
+        "country": "France",
+        "borders": ["German Reich", "Belgium", "Luxembourg",
+        "Switzerland", "Italy", "Spain", "Brazil", "Netherlands", "United Kingdom",
+        "Ethiopia", "Siam", "Guangxi Clique", "Yunnan", "British Raj", "Congo", "Portugal"]
+    }
+
+
+
+
+
+]

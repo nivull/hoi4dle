@@ -12,8 +12,8 @@ async function loadData() {
         window.resolveData();
 }
 
-loadData();
 
+loadData();
 
 inputbar.addEventListener('input', (event)=> {
     if(event.inputType == 'deleteContentBackward') {
@@ -43,16 +43,14 @@ function findMatching(input) {
         }
 
     });
-    
-    updateSelection(first.sort(), input);
-    updateSelection(matching.sort(), input);
-    
+    total = matching.length + first.length;
+    updateSelection(first.sort(), input, total);
+    updateSelection(matching.sort(), input, total);
     }
 
-function updateSelection(matching, input) {
+function updateSelection(matching, input, total) {
 
-    console.log(matching)
-    if(matching.length == 0) {
+    if(total.length === 0) {
         selectionZone.style.visibility = "hidden";
     }
     else {
@@ -61,19 +59,26 @@ function updateSelection(matching, input) {
 
             const regex = new RegExp(input, 'gi');
             const processedWord = x.country.replace(regex, `<b>$&</b>`);
-            console.log(processedWord)
-
-
-
             const li = document.createElement('li');
             li.className= "selectionOption";
             li.innerHTML = `<li>${processedWord}</li>`
             li.addEventListener('click', (event) => {
-                window.selected = event.target.textContent;
-                //console.log(window.selected);
+                let selectedText = event.target.textContent;
+                window.selected = getSelectedCountry(selectedText);
+                const selectionEvent = new CustomEvent('countrySelection');
+                window.dispatchEvent(selectionEvent);
+
             })
             list.appendChild(li);
-            console.log(li.outerHTML)
+        }
     }
+}
+
+function getSelectedCountry(txt) {
+
+    for(let x of window.countryData) {
+        if(x.country == txt) {
+            return x;
+        }
     }
 }

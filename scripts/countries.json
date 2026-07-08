@@ -1,43 +1,61 @@
 [
     {
         "country": "German Reich",
-        "borders": ["Denmark", "Netherlands", "France", 
+        "border": ["Denmark", "Netherlands", "France", 
         "Lithuania", "Czechoslovakia", "Belgium", "Luxembourg",
-         "Austria", "Switzerland", "Poland"]
+         "Austria", "Switzerland", "Poland"],
+         "ideology": "Fascism",
+         "factories": 73
     },
     {
         "country": "France",
-        "borders": ["German Reich", "Belgium", "Luxembourg",
+        "border": ["German Reich", "Belgium", "Luxembourg",
         "Switzerland", "Italy", "Spain", "Brazil", "Netherlands", "United Kingdom",
-        "Ethiopia", "Siam", "Guangxi Clique", "Yunnan", "British Raj", "Congo", "Portugal", "British Raj"]
+        "Ethiopia", "Siam", "Guangxi Clique", "Yunnan", "British Raj", "Congo", "Portugal", "British Raj"],
+        "ideology": "Democracy",
+        "factories": 52
     },
     {
         "country": "Sweden",
-        "border": ["Norway", "Denamrk", "Finland"]
+        "border": ["Norway", "Denamrk", "Finland"],
+        "ideology": "Democracy",
+        "factories": 15
     },  
     {
         "country": "Denmark",
-        "border": ["German Reich", "Sweden"]
+        "border": ["German Reich", "Sweden"],
+        "ideology": "Democracy",
+        "factories": 14
     },
     {
         "country": "Finland",
-        "border": ["Soviet Union", "Norway", "Sweden"]
+        "border": ["Soviet Union", "Norway", "Sweden"],
+        "ideology": "Non-Aligned",
+        "factories": 11
     },
     {
         "country": "Estonia",
-        "border": ["Soviet Union", "Latvia"]
+        "border": ["Soviet Union", "Latvia"],
+        "ideology": "Non-Aligned",
+        "factories": 6
     },
     {
         "country": "Latvia",
-        "border": ["Soviet Union", "Estonia", "Lithuania", "Poland"]
+        "border": ["Soviet Union", "Estonia", "Lithuania", "Poland"],
+        "ideology": "Non-Aligned",
+        "factories": 11
     },
     {
         "country": "Lithuania",
-        "border": ["Latvia", "Poland", "Soviet Union", "German Reich"]
+        "border": ["Latvia", "Poland", "Soviet Union", "German Reich"],
+        "ideology": "Non-Aligned",
+        "factories": 7
     },  
     {
         "country": "Poland",
-        "border": ["Latvia", "Soviet Union", "German Reich", "Czechoslovakia", "Romania"]
+        "border": ["Latvia", "Soviet Union", "German Reich", "Czechoslovakia", "Romania"],
+        "ideology": "Non-Aligned",
+        "factories": 26
     },
     {
         "country": "Czechoslovakia",
@@ -49,7 +67,8 @@
     },
     {
         "country": "Switzerland",
-        "border": ["German Reich", "France", "Italy", "Austria"]
+        "border": ["German Reich", "France", "Italy", "Austria"],
+        "ideology": "Democracy"
     },
     {
         "country": "Netherlands",
@@ -61,7 +80,9 @@
     },
     {
         "country": "Luxembourg",
-        "border": ["German Reich", "Belgium", "France"]
+        "border": ["German Reich", "Belgium", "France"],
+        "ideology": "Democracy",
+        "factories": 2
     },
     {
         "country": "Spain",
@@ -73,7 +94,9 @@
     },
     {
         "country": "Italy",
-        "border": ["France", "Switzerland", "Austria", "Yugoslavia", "Ethiopia", "United Kingdom"]
+        "border": ["France", "Switzerland", "Austria", "Yugoslavia", "Ethiopia", "United Kingdom"],
+        "ideology": "Fascism",
+        "factories": 56
     },
     {
         "country": "Yugoslavia",
@@ -107,7 +130,8 @@
         "country": "United Kingdom",
         "border": ["Ireland", "Italy", "France", "Congo", "Ethiopia", "Portugal",
          "South Africa", "Mexico", "Canada", "Netherlands", "China", "Yemen", "British Raj", "Brazil",
-          "Venezuela", "Saudi Arabia", "Oman", "Guatemala", "British Malaya"]
+          "Venezuela", "Saudi Arabia", "Oman", "Guatemala", "British Malaya"],
+          "ideology": "Democracy"
     },
     {
         "country": "Soviet Untion",

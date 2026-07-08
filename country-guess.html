@@ -18,15 +18,33 @@
         <h1 class="titlebox" onclick="location.href='index.html'">HOI4dle</h1>
         <h2 id="subtitle" >Guess the Country</h2>
         
-        <div class="content">        
+        <div id="guessing">       
+            
+            <div id="label-row" class="game-row">
+                <div id="game-label" class="game-label">Country</div>
+                <div id="i-label" class="game-label">Ideology</div>
+                <div id="f-label" class="game-label">Factories</div>
+                <div id="d-label" class="game-label">Divisions</div>
+            </div>
+
+            <div id="row0" class="game-row">
+                <div id="c-0" class="c-guess"></div>
+                <div id="i-0" class="i-guess"></div>
+                <div id="f-0" class="f-guess">
+                    
+                </div>
+                <div id="d-0" class="d-guess">
+
+                </div>
+            </div>
         </div>
 
+        <div id="shrink"></div>
 
         <div id="input-zone">
-            
+                
             <ul id="countries">
             </ul>
-
             <input type="text" id="input-bar" placeholder="Type in a country">
 
         </div>

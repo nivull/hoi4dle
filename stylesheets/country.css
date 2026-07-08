@@ -22,7 +22,7 @@
 
 .bg-img{
     height: 100vh;
-    position:absolute;
+    position:fixed;
     opacity: 0.1;
     top: 0;
     z-index: -1;
@@ -77,6 +77,8 @@ body{
     justify-content: start;
     flex-direction: column;
     width: 100%;
+    position: relative;
+    margin-top: 10vh;
 }
 
 #countries{
@@ -95,6 +97,10 @@ body{
     background-color: var(--background-color);
     border: solid 1px var(--info-text);
     visibility: hidden;
+    position:absolute;
+    bottom: 0.85rem;
+    left: 0;
+    box-sizing: border-box;
 }
 
 ::-webkit-scrollbar{
@@ -120,4 +126,38 @@ body{
 
 .selectionOption:hover{
     background-color: var(--selected-color);
+}
+
+#guessing{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.game-row{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: center;
+}
+
+.game-label{
+    font-size: 1.3rem;
+    background-color: var(--background-color);
+    width: 24.5%;
+    padding-block: 0.5rem;
+    border: 0.2rem solid var(--selected-color);
+    cursor: pointer;
+}
+
+#shrink{
+    display: flex;;
+    min-height: 0px;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+
+#game {
+    display: flex;
 }

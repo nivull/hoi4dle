@@ -27,13 +27,11 @@ inputbar.addEventListener('input', (event)=> {
 });
 
 function findMatching(input) {
-
-    let first = [];
+    const first = [];
     const matching = countryData.filter((elem)=> {
-
         if(elem.country.toLowerCase().includes(input.toLowerCase())) {
             //if first letter
-            if(elem.country.toLowerCase()[0] == input.toLowerCase()){
+            if(elem.country.toLowerCase().startsWith(input.toLowerCase())){
                 first.push(elem);
                 return false;
             }

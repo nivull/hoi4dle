@@ -132,6 +132,7 @@ body{
     display: flex;
     width: 100%;
     flex-direction: column;
+    gap: 8%;
 }
 
 .game-row{
@@ -151,12 +152,18 @@ body{
     cursor: pointer;
 }
 
-#shrink{
-    display: flex;;
-    min-height: 0px;
-    flex-shrink: 1;
-    flex-basis: 100px;
+.game-box{
+    font-size: 1.1rem;
+    background-color: var(--background-color);
+    width: 24.5%;
+    padding-block: 0.5rem;
+    border: 0.2rem solid var(--selected-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 #game {
     display: flex;

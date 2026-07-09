@@ -1,5 +1,5 @@
 const list = document.getElementById('countries');
-const inputbar = document.getElementById("input-bar");
+const inputBar = document.getElementById("input-bar");
 const selectionZone = document.getElementById("countries");
 async function loadData() {
     //set up loaded signal thing
@@ -8,14 +8,14 @@ async function loadData() {
     });
         const response = await fetch('./scripts/countries.json');
         window.countryData = await response.json();
-        //data done loadin
+        //data done loading
         window.resolveData();
 }
 
 
 loadData();
 
-inputbar.addEventListener('input', (event)=> {
+inputBar.addEventListener('input', (event)=> {
     if(event.inputType == 'deleteContentBackward') {
         selectionZone.style.visibility = 'hidden';
     }
@@ -39,7 +39,6 @@ function findMatching(input) {
         } else{
             return false;
         }
-
     });
     total = matching.length + first.length;
     updateSelection(first.sort(), input, total);
@@ -65,6 +64,8 @@ function updateSelection(matching, input, total) {
                 window.selected = getSelectedCountry(selectedText);
                 const selectionEvent = new CustomEvent('countrySelection');
                 window.dispatchEvent(selectionEvent);
+                selectionZone.style.visibility = "hidden";
+                inputBar.value = '';
 
             })
             list.appendChild(li);

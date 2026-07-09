@@ -149,19 +149,27 @@ body{
     width: 24.5%;
     padding-block: 0.5rem;
     border: 0.2rem solid var(--selected-color);
-    cursor: pointer;
+    cursor: default;
+    height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    font-weight: bold;
 }
 
 .game-box{
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     background-color: var(--background-color);
     width: 24.5%;
-    padding-block: 0.5rem;
+    padding-block: 0.7rem;
     border: 0.2rem solid var(--selected-color);
-    cursor: pointer;
+    cursor: default;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 1.2rem;
+    font-weight: bold;
 }
 
 

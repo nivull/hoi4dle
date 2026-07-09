@@ -5,7 +5,8 @@
         "Lithuania", "Czechoslovakia", "Belgium", "Luxembourg",
          "Austria", "Switzerland", "Poland"],
          "ideology": "Fascism",
-         "factories": 73
+         "factories": 73,
+         "divisions": 30
     },
     {
         "country": "France",
@@ -13,49 +14,57 @@
         "Switzerland", "Italy", "Spain", "Brazil", "Netherlands", "United Kingdom",
         "Ethiopia", "Siam", "Guangxi Clique", "Yunnan", "British Raj", "Congo", "Portugal", "British Raj"],
         "ideology": "Democracy",
-        "factories": 52
+        "factories": 52,
+        "divisions": 74
     },
     {
         "country": "Sweden",
         "border": ["Norway", "Denamrk", "Finland"],
         "ideology": "Democracy",
-        "factories": 15
+        "factories": 15,
+        "divisions": 12
     },  
     {
         "country": "Denmark",
         "border": ["German Reich", "Sweden"],
         "ideology": "Democracy",
-        "factories": 14
+        "factories": 14,
+        "divisions": 5
     },
     {
         "country": "Finland",
         "border": ["Soviet Union", "Norway", "Sweden"],
         "ideology": "Non-Aligned",
-        "factories": 11
+        "factories": 11,
+        "divisions": 18
     },
     {
         "country": "Estonia",
         "border": ["Soviet Union", "Latvia"],
         "ideology": "Non-Aligned",
-        "factories": 6
+        "factories": 6,
+        "divisions": 3
     },
     {
         "country": "Latvia",
         "border": ["Soviet Union", "Estonia", "Lithuania", "Poland"],
         "ideology": "Non-Aligned",
-        "factories": 11
+        "factories": 11,
+        "divisions": 4
     },
     {
         "country": "Lithuania",
         "border": ["Latvia", "Poland", "Soviet Union", "German Reich"],
         "ideology": "Non-Aligned",
-        "factories": 7
+        "factories": 7,
+        "divisions": 3
     },  
     {
         "country": "Poland",
         "border": ["Latvia", "Soviet Union", "German Reich", "Czechoslovakia", "Romania"],
         "ideology": "Non-Aligned",
-        "factories": 26
+        "factories": 26,
+        "divisions": 40
     },
     {
         "country": "Czechoslovakia",

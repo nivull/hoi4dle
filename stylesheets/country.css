@@ -78,7 +78,7 @@ body{
     flex-direction: column;
     width: 100%;
     position: relative;
-    margin-top: 10vh;
+    margin-top: 18vh;
 }
 
 #countries{
@@ -147,7 +147,7 @@ body{
     font-size: 1.3rem;
     background-color: var(--background-color);
     width: 24.5%;
-    padding-block: 0.5rem;
+    padding-block: 0.7rem;
     border: 0.2rem solid var(--selected-color);
     cursor: default;
     height: 1.2rem;
@@ -156,6 +156,7 @@ body{
     align-items: center;
     flex-grow: 0;
     font-weight: bold;
+    height: 1.2rem;
 }
 
 .game-box{

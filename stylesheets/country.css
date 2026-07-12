@@ -167,7 +167,7 @@ body{
     align-items: center;
     font-weight: bold;
     height: 1.2rem;
-    flex: 0 0 24.5%;
+    flex: 0 0 0px;
 }
 .game-label{
     font-size: 1.2rem;
@@ -184,19 +184,15 @@ body{
 @media (max-width:  480px) {
 
 
-    body{
-        background-color: white;
-    }
-
 
     .game-box, .game-label {
 
-        font-size: 0.4;
+        font-size: 0.4rem;
 
     }
 
     .titlebox {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
 
 

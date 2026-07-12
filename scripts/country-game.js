@@ -11,12 +11,13 @@ const guessDistance = 10;
 async function dataLoaded() {
     await window.countryDataPromise;
     console.log("Country data loaded");
+    console.log(window.countryData)
 
     answer = getCountry("France");
     addEventListener('countrySelection', (event) => {
 
         if(!wonGame) {
-            guess(testBorders(), testIdeology(), testFactories(), testDivisions());
+            guess(testBorders(), testIdeology(), testFactories(), testContinent());
         }
             
         if(wonGame) {
@@ -103,51 +104,49 @@ function testFactories() {
     }
 }
 
-function testDivisions() {
+function testContinent() {
 
-    const ansD = answer.divisions;
-    const guessD = window.selected.divisions;
+    const ans = answer.continent;
+    const guess = window.selected.continent;
 
-    if(guessD == ansD) {
-        //divisions correct
-        //console.log("Correct Divisions");
-        return 'correct';
-    } else if(ansD > guessD && ansD <= guessD + guessDistance) {
-        //divisions close up
-        //console.log("Close Divisions Up");
-        return 'up close';
-    } else if(ansD < guessD && ansD >= guessD - guessDistance){
-        //divisions close down
-        //console.log("Divisions Close Down");
-        return 'down close';
-    } else if(ansD > guessD){
-        //divisions far up
-        //console.log("Divisions Far Up");
-        return 'up far';
-    } else {
-        //divisions far down
-        //console.log("Divisions Far Down");
-        return 'down far';
+    const contBorders = {
+        "Europe": "Asia",
+        "Africa": "Asia",
+        "North America": "South America",
+        "South America": "North America",
+        "Oceania": "N/A"
     }
+
+    if(ans == guess) {
+        return 2;
+    } else if(contBorders[ans] == guess) {
+        return 1;
+    } else {
+        return 0;
+    }
+
+
+
+
 }
 
-function guess(borders, ideology, factories, divisions) {
+function guess(borders, ideology, factories, continent) {
 
     const rowObjects = [document.getElementById(`c-${currentRow}`),
         document.getElementById(`i-${currentRow}`),
         document.getElementById(`f-${currentRow}`),
-        document.getElementById(`d-${currentRow}`)
+        document.getElementById(`cont-${currentRow}`)
     ];
 
     rowObjects[0].textContent = window.selected.country;
     rowObjects[1].textContent = window.selected.ideology;
     rowObjects[2].textContent = window.selected.factories;
-    rowObjects[3].textContent = window.selected.divisions;
+    rowObjects[3].textContent = window.selected.continent;
 
     simpleCheck(borders, rowObjects[0]);
     simpleCheck(ideology, rowObjects[1]);
     complexCheck(factories, rowObjects[2]);
-    complexCheck(divisions, rowObjects[3]);
+    simpleCheck(continent, rowObjects[3]);
 
 }
 

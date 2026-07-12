@@ -166,8 +166,7 @@ body{
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    height: 1.2rem;
-    flex: 0 0 0px;
+    flex: 1 1 0px;
 }
 .game-label{
     font-size: 1.2rem;

@@ -183,14 +183,20 @@ body{
 
 @media (max-width:  480px) {
 
+
+    body{
+        background-color: white;
+    }
+
+
     .game-box, .game-label {
 
-        font-size: 0.5;
+        font-size: 0.4;
 
     }
 
     .titlebox {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
 

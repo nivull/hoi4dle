@@ -190,7 +190,7 @@
     {
         "country": "Soviet Untion",
         "border": ["Finland", "Norway", "Estonia", "Latvia", "Lithuania", "Poland", "Romania",
-         "Turkey", "Iran", "Afghanistan", "Sinkiang", "Tanna Tuva", "Mongolia", "Manchuko", "Japan"],
+         "Turkey", "Iran", "Afghanistan", "Sinkiang", "Tannu Tuva", "Mongolia", "Manchuko", "Japan"],
          "ideology": "Communism",
          "factories": 85,
          "continent": "Europe"
@@ -456,9 +456,16 @@
     },
     {
         "country": "Mongolia",
-        "border": ["Tanna Tuva", "Soviet Union", "Sinkiang", "Gansu Ma", "Ningxia Ma", "Shanxi", "Mengjiang", "Manchuko"],
+        "border": ["Tannu Tuva", "Soviet Union", "Sinkiang", "Gansu Ma", "Ningxia Ma", "Shanxi", "Mengjiang", "Manchuko"],
         "ideology": "Communism",
         "factories": 4,
+        "continent": "Asia"
+    },
+    {
+        "country": "Tannu Tuva",
+        "border": ["Mongolia", "Soviet Union"],
+        "ideology": "Communism",
+        "factories": 2,
         "continent": "Asia"
     },
     {

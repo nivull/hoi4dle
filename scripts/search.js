@@ -18,7 +18,6 @@ loadData();
 //in case they do ctrl a then backspace
 addEventListener('keyup', (event)=> {
     if(event.key == 'Backspace' && inputBar.value == '') {
-        console.log("hidden")
         selectionZone.style.visibility ='hidden';
     }
 

@@ -14,7 +14,7 @@ async function dataLoaded() {
     getAnswer();
     answer = getCountry(localStorage.getItem("todays-answer"));
     addEventListener('countrySelection', (event) => {
-
+        console.log("Country Selection")
         if(!wonGame) {
             guess(testBorders(), testIdeology(), testFactories(), testContinent());
         }

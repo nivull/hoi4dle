@@ -126,6 +126,7 @@
         "country": "Italy",
         "border": ["France", "Switzerland", "Austria", "Yugoslavia", "Ethiopia", "United Kingdom"],
         "ideology": "Fascism",
+        "factories": 56,
         "continent": "Europe"
     },
     {
@@ -193,5 +194,460 @@
          "ideology": "Communism",
          "factories": 85,
          "continent": "Europe"
+    },
+    {
+        "country": "Iceland",
+        "border": ["N/A"],
+        "ideology": "Democracy",
+        "factories": 2,
+        "continent": "Europe"
+    },
+    {
+        "country":"Liberia",
+        "border": ["United Kingdom", "France"],
+        "ideology": "Democracy",
+        "factories": 2,
+        "continent": "Africa"
+    },
+    {
+        "country":"South Africa",
+        "border": ["United Kingdom", "Portugal"],
+        "ideology": "Democracy",
+        "factories": 10,
+        "continent": "Africa"
+    },
+    {
+        "country":"Ethiopia",
+        "border": ["Aussa", "Italy", "France", "United Kingdom"],
+        "ideology": "Non-Aligned",
+        "factories": 4,
+        "continent": "Africa"
+    },
+    {
+        "country":"Aussa",
+        "border": ["Ethiopia", "Italy", "France"],
+        "ideology": "Non-Aligned",
+        "factories": 1,
+        "continent": "Africa"
+    },
+    {
+        "country":"Turkey",
+        "border": ["Greece", "Bulgaria", "Syria", "Soviet Union", "Iran", "Iraq"],
+        "ideology": "Non-Aligned",
+        "factories": 17,
+        "continent": "Asia"
+    },
+    {
+        "country":"Syria",
+        "border": ["Lebanon", "Iraq", "Turkey", "Jordan", "Palestine"],
+        "ideology": "Democracy",
+        "factories": 0,
+        "continent": "Asia"
+    },
+    {
+        "country":"Lebanon",
+        "border": ["Syria", "Palestine"],
+        "ideology": "Democracy",
+        "factories": 1,
+        "continent": "Asia"
+    },
+    {
+        "country":"Palestine",
+        "border": ["Lebanon", "Syria", "Jordan", "United Kingdom"],
+        "ideology": "Non-Aligned",
+        "factories": 1,
+        "continent": "Asia"
+    },
+    {
+        "country":"Jordan",
+        "border": ["Syria", "Saudi Arabia", "Iraq", "Palestine"],
+        "ideology": "Non-Aligned",
+        "factories": 1,
+        "continent": "Asia"
+    },
+    {
+        "country" :"Saudi Arabia",
+        "border": ["Iraq", "United Kingdom", "Kuwait", "Jordan", "Oman", "Yemen"],
+        "ideology": "Non-Aligned",
+        "factories": 3,
+        "continent": "Asia"
+    },
+    {
+        "country": "Iraq",
+        "border": ["Iran", "Syria", "Jordan", "Kuwait", "Turkey"],
+        "ideology": "Non-Aligned",
+        "factories": 4,
+        "continent": "Asia"
+    },
+    {
+        "country": "Oman",
+        "border": ["Saudi Arabia", "United Kingdom"],
+        "ideology": "Non-Aligned",
+        "factories": 2,
+        "continent": "Asia"
+    },
+    {
+        "country": "Yemen",
+        "border": ["British Raj", "United Kingdom", "Saudi Arabia"],
+        "ideology": "Non-Aligned",
+        "factories": 2,
+        "continent": "Asia"
+    },
+    {
+        "country": "Iran",
+        "border": ["Soviet Union", "Afghanistan", "Iraq", "Turkey", "British Raj"],
+        "ideology": "Non-Aligned",
+        "factories": 7,
+        "continent": "Asia"
+    },  
+    {
+        "country": "Afghanistan",
+        "border": ["Soviet Union", "Iran", "British Raj", "Sinkiang"],
+        "ideology": "Non-Aligned",
+        "factories": 4,
+        "continent": "Asia"
+    },
+    {
+        "country": "British Raj",
+        "border": ["Yemen", "Afghanistan", "Iran", "Nepal", "Bhutan", "Tibet", "Sinkiang", "Khotan Ma", "Burma", "France", "Portugal", "United Kingdom"],
+        "ideology": "Non-Aligned",
+        "factories": 11,
+        "continent": "Asia"
+    },
+    {
+        "country": "Nepal",
+        "border": ["Tibet", "British Raj"],
+        "ideology": "Non-Aligned",
+        "factories": 3,
+        "continent": "Asia"
+    },
+    {
+        "country": "Bhutan",
+        "border": ["British Raj", "Tibet"],
+        "ideology": "Non-Aligned",
+        "factories": 3,
+        "continent": "Asia"
+    },
+    {
+        "country":"Tibet",
+        "border": ["Bhutan", "Nepal", "British Raj", "Sichuan Clique", "Yunnan", "Quinghai Ma", "Khotan Ma", "Burma"],
+        "ideology": "Non-Aligned",
+        "factories": 3,
+        "continent": "Asia"
+    },
+    {
+        "country": "Sinkiang",
+        "border": ["Soviet Union", "Khotan Ma", "British Raj", "Mongolia", "Afghanistan", "Gansu Ma"],
+        "ideology": "Communism",
+        "factories": 5,
+        "continent": "Asia"
+    },
+    {
+        "country": "Khotan Ma",
+        "border": ["Gansu Ma", "Sinkiang", "Tibet", "Quinghai Ma", "British Raj"],
+        "ideology": "Non-Aligned",
+        "factories": 0,
+        "continent": "Asia"
+    },
+    {
+        "country": "Qinghai Ma",
+        "border": ["Sichuan Clique", "Northeastern Army", "Tibet", "Gansu Ma", "Khotan Ma"],
+        "ideology": "Non-Aligned",
+        "factories": 5,
+        "continent": "Asia"
+    },
+    {
+        "country": "Sichuan Clique",
+        "border": ["TIbet", "Yunnan", "Quinghai Ma", "Northeastern Army", "China"],
+        "ideology": "Non-Aligned",
+        "factories": 5,
+        "continent": "Asia"
+    },
+    {
+        "country": "Yunnan",
+        "border": ["Sichuan Clique", "China", "Guangxi Clique", "France", "Burma", "Tibet"],
+        "ideology": "Non-Aligned",
+        "factories": 4,
+        "continent": "Asia"
+    },
+    {
+        "country": "Burma",
+        "border": ["British Raj", "Siam", "France", "Yunnan", "Tibet"],
+        "ideology": "Democracy",
+        "factories": 4,
+        "continent": "Asia"
+    },
+    {
+        "country": "Siam",
+        "border": ["France", "British Malaya", "Burma"],
+        "ideology": "Non-Aligned",
+        "factories": 8,
+        "continent": "Asia"
+    },
+    {
+        "country": "British Malaya",
+        "border": ["United Kingdom", "Siam", "East Indies"],
+        "ideology": "Democracy",
+        "factories": 3,
+        "continent": "Asia"
+    },
+    {
+        "country": "East Indies",
+        "border": ["British Malaya", "Portugal", "Australia"],
+        "ideology": "Non-Aligned",
+        "factories": 10,
+        "continent": "Asia"
+    },
+    {
+        "country": "Guanxi Clique",
+        "border": ["Guangdong Clique", "China", "France", "Yunnan"],
+        "ideology": "Non-Aligned",
+        "factories": 4,
+        "continent": "Asia"
+    },
+    {
+        "country": "Guangdong Clique",
+        "border": ["United Kingdom", "Guangxi Clique", "China", "Portugal"],
+        "ideology": "Non-Aligned",
+        "factories": 6,
+        "continent": "Asia"
+    },
+    {
+        "country": "China",
+        "border": ["Guangdong Clique", "Guangxi Clique", "Sichuan Clique", "Northeastern Army", "Shanxi", "Hebei Chahar", "Shangdong Clique", "Yunnan"],
+        "ideology": "Non-Aligned",
+        "factories": 21,
+        "continent": "Asia"
+    },
+    {
+        "country": "Northeastern Army",
+        "border": ["Sichuan Clique", "China", "Communist China", "Quinghai Ma", "Ningxia Ma", "Gansu Ma", "Shanxi"],
+        "ideology": "Non-Aligned",
+        "factories": 5,
+        "continent": "Asia"
+    },
+    {
+        "country": "Gansu Ma",
+        "border": ["Ningxia Ma", "Quinghai Ma", "Northeastern Army", "Khotan Ma", "Sinkiang", "Mongolia"],
+        "ideology": "Non-Aligned",
+        "factories": 0,
+        "continent": "Asia"
+    },
+    {
+        "country": "Ningxia  Ma",
+        "border": ["Mongolia", "Gansu Ma", "Northeastern Army", "Quinghai Ma", "Shanxi", "Communist China"],
+        "ideology": "Non-Aligned",
+        "factories": 1,
+        "continent": "Asia"
+    },
+    {
+        "country": "Communist China",
+        "border": ["Northeastern Army", "Shanxi", "Ningxia Ma"],
+        "ideology": "Communism",
+        "factories": 2,
+        "continent": "Asia"
+    },
+    {
+        "country": "Shanxi",
+        "border": ["Communist China", "China", "Hebei Chahar", "Mengjiang", "Mongolia", "Ningxia Ma"],
+        "ideology": "Non-Aligned",
+        "factories": 3,
+        "continent": "Asia"
+    },
+    {
+        "country": "Mongolia",
+        "border": ["Tanna Tuva", "Soviet Union", "Sinkiang", "Gansu Ma", "Ningxia Ma", "Shanxi", "Mengjiang", "Manchuko"],
+        "ideology": "Communism",
+        "factories": 4,
+        "continent": "Asia"
+    },
+    {
+        "country": "Mengjiang",
+        "border": ["Mongolia", "Manchuko", "Shanxi", "Hebei Chahar"],
+        "ideology": "Non-Aligned",
+        "factories": 3,
+        "continent": "Asia"
+    },
+    {
+        "country": "Hebei Char",
+        "border": ["China", "Japan", "Shangdong Clique", "Shanxi", "Mengjiang"],
+        "ideology": "Non-Aligned",
+        "factories": 2,
+        "continent": "Asia"
+    },
+    {
+        "country": "Shangdong Clique",
+        "border": ["China", "Hebei Chahar"],
+        "ideology": "Non-Aligned",
+        "factories": 1,
+        "continent": "Asia"
+    },
+    {
+        "country": "Manchuko",
+        "border": ["Japan", "Soviet Union", "Hebei Chahar", "Mengjiang", "Mongolia"],
+        "ideology": "Fascism",
+        "factories": 2,
+        "continent": "Asia"
+    },
+    {
+        "country": "Japan",
+        "border": ["Manchuko", "Soviet Union", "Hebei Chahar"],
+        "ideology": "Non-Aligned",
+        "factories": 54,
+        "continent": "Asia"
+    },
+    {
+        "country": "Philipenes",
+        "border": ["N/A"],
+        "ideology": "Democracy",
+        "factories": 7,
+        "continent": "Asia"
+    },
+    {
+        "country": "Australia",
+        "border": ["East Indies"],
+        "ideology": "Democracy",
+        "factories": 17,
+        "continent": "Oceania"
+    },
+    {
+        "country": "New Zealand",
+        "border": ["N/A"],
+        "ideology": "Democracy",
+        "factories": 5,
+        "continent": "Oceania"
+    },
+    {
+        "country": "Canada",
+        "border": ["United States", "United Kingdom"],
+        "ideology": "Democracy",
+        "factories": 19,
+        "continent": "North America"
+    },
+    {
+        "country": "United States",
+        "border": ["Canada", "Mexico", "Panama"],
+        "ideology": "Democracy",
+        "factories": 160,
+        "continent": "North America"
+    },
+    {
+        "country": "Mexico",
+        "border": ["United States", "Guatemala", "United Kingdom"],
+        "ideology": "Non-Aligned",
+        "factories": 13,
+        "continent": "North America"
+    },
+    {
+        "country": "Guatemala",
+        "border": ["United Kingdom", "Mexico", "Honduras", "El Salvador"],
+        "ideology": "Non-Aligned",
+        "factories": 9,
+        "continent": "North America"
+    },
+    {
+        "country": "El Salvador",
+        "border": ["Honduras", "Guatemala"],
+        "ideology": "Fascism",
+        "factories": 3,
+        "continent": "North America"
+    },
+    {
+        "country": "Honduras",
+        "border": ["El Salvador", "Guatemala", "Nicaragua"],
+        "ideology": "Democracy",
+        "factories": 3,
+        "continent": "North America"
+    },
+    {
+        "country": "Nicaragua",
+        "border": ["Honduras", "Costa Rica"],
+        "ideology": "Non-Aligned",
+        "factories": 3,
+        "continent": "North America"
+    },
+    {
+        "country": "Costa Rica",
+        "border": ["Nicaragua", "Panama"],
+        "ideology": "Democracy",
+        "factories": 3,
+        "continent": "North America"
+    },
+    {
+        "country": "Panama",
+        "border": ["United States", "Colombia", "Costa Rica"],
+        "ideology": "Democracy",
+        "factories": 3,
+        "continent": "North America"
+    },
+    {
+        "country": "Colombia",
+        "border": ["Panama", "Venezuela", "Peru", "Ecuador", "Brazil"],
+        "ideology": "Democracy",
+        "factories": 8,
+        "continent": "South America"
+    },
+    {
+        "country": "Venezuela",
+        "border": ["United Kingdom", "Brazil", "Colombia"],
+        "ideology": "Fascism",
+        "factories": 8,
+        "continent": "South America"
+    },
+    {
+        "country": "Ecuador",
+        "border": ["Peru", "Colombia"],
+        "ideology": "Democracy",
+        "factories": 6,
+        "continent": "South America"
+    },
+    {
+        "country": "Peru",
+        "border": ["Ecuador", "Brazil", "Chile", "Bolivia", "Colombia"],
+        "ideology": "Fascism",
+        "factories": 9,
+        "continent": "South America"
+    },
+    {
+        "country": "Brazil",
+        "border": ["France", "Netherlands", "United Kingdom", "Colombia", "Venezuela", "Peru", "Bolivia", "Paraguay", "Uruguay", "Argentina"],
+        "ideology": "Democracy",
+        "factories": 20,
+        "continent": "South America"
+    },
+    {
+        "country": "Bolivia",
+        "border": ["Brazil", "Paraguay", "Argentina", "Chile", "Peru"],
+        "ideology": "Democracy",
+        "factories": 7,
+        "continent": "South America"
+    },
+    {
+        "country": "Paraguay",
+        "border": ["Bolivia", "Brazil", "Argentina"],
+        "ideology": "Democracy",
+        "factories": 4,
+        "continent": "South America"
+    },
+    {
+        "country": "Uruguay",
+        "border": ["Brazil", "Argentina"],
+        "ideology": "Non-Aligned",
+        "factories": 10,
+        "continent": "South America"
+    },
+    {
+        "country": "Argentina",
+        "border": ["Brazil", "Paraguay", "Bolivia", "Chile"],
+        "ideology": "Non-Aligned",
+        "factories": 15,
+        "continent": "South America"
+    },  
+    {
+        "country": "Chile",
+        "border": ["Argentina", "Bolivia", "Peru"],
+        "ideology": "Democracy",
+        "factories": 14,
+        "continent": "South America"
     }
 ]

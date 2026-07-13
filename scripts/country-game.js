@@ -1,6 +1,6 @@
-var answer;
+let answer;
 let currentRow = 0;
-const maxRow = 4;
+const maxRow = 5;
 // box colours
 const greyColour = "#272727";
 const yellowColour = "#bdaa40";
@@ -11,9 +11,8 @@ const guessDistance = 10;
 async function dataLoaded() {
     await window.countryDataPromise;
     console.log("Country data loaded");
-    console.log(window.countryData)
-
-    answer = getCountry("France");
+    getAnswer();
+    answer = getCountry(localStorage.getItem("todays-answer"));
     addEventListener('countrySelection', (event) => {
 
         if(!wonGame) {
@@ -125,9 +124,6 @@ function testContinent() {
         return 0;
     }
 
-
-
-
 }
 
 function guess(borders, ideology, factories, continent) {
@@ -197,13 +193,28 @@ function complexCheck(toCheck, obj) {
             changeColour(obj, greyColour);
     }
 
-
-
-
 }
 
 function changeColour(obj, clr) {
 
     obj.style.backgroundColor = clr;
     obj.style.borderColor = clr;
+}
+
+
+//get today's game answer
+
+
+function getAnswer() {
+
+
+    const curDate = (new Date()).toLocaleDateString('en-US');
+
+    console.log(curDate);
+
+   if(localStorage.getItem("date") != curDate) {
+        localStorage.setItem("date", curDate);
+        const newCountry = window.countryData[Math.floor(Math.random() * window.countryData.length - 1) + 1].country;
+        localStorage.setItem("todays-answer", newCountry);
+   }
 }

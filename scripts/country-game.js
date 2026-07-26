@@ -20,15 +20,13 @@ async function dataLoaded() {
         }
             
         if(wonGame) {
-            console.log("You Win!");
+           endPopup();
         }
          else if(currentRow < maxRow) {
             currentRow++;
         } else{
-            console.log("You Lost :(");
+            endPopup();
         }
-
-
     });
 }
 
@@ -43,21 +41,17 @@ function getCountry(txt) {
     }
 }
 
-//these two functions below could be the same but im too lazy to fix it
 function testBorders() {
 
         if(window.selected.country == answer.country) {
             //if correct
-            //console.log("Correct Country")
             wonGame = true;
             return 2;
         } else if(window.selected.border.includes(answer.country)){
             //if bordering
-            //console.log("Bordering");
             return 1;
         } else {
             //no borders
-            //console.log("Not Bordering");
             return 0;
         }
 }
@@ -66,10 +60,8 @@ function testIdeology() {
 
     if(window.selected.ideology == answer.ideology) {
         //ideology correct
-        //console.log("Correct Ideology");
         return 2;
     } else {
-        //console.log("Incorrect Ideology");
         return 0;
     }
 }
@@ -81,24 +73,14 @@ function testFactories() {
     const ansF = answer.factories;
     const guessF = window.selected.factories;
     if(guessF == ansF) {
-        //factories correct
-        //console.log("Correct Factories");
         return 'correct';
     } else if(ansF > guessF && ansF <= guessF + guessDistance) {
-        //factories close up
-        //console.log("Close Factories Up");
         return 'up close';
     } else if(ansF < guessF && ansF >= guessF - guessDistance){
-        //factories close down
-        //console.log("Factories Close Down");
         return 'down close';
     } else if(ansF > guessF){
-        //factories far up
-        //console.log("Factories Far Up");
         return 'up far';
     } else {
-        //factories far down
-        //console.log("Factories Far Down");
         return 'down far';
     }
 }
@@ -113,17 +95,17 @@ function testContinent() {
         "Africa": "Asia",
         "North America": "South America",
         "South America": "North America",
-        "Oceania": "N/A"
+        "Oceania": "N/A",
+        "Asia": ["Europe", "Africa"]
     }
 
     if(ans == guess) {
         return 2;
-    } else if(contBorders[ans] == guess) {
+    } else if(contBorders[ans].includes(guess)) {
         return 1;
     } else {
         return 0;
     }
-
 }
 
 function guess(borders, ideology, factories, continent) {
@@ -143,7 +125,6 @@ function guess(borders, ideology, factories, continent) {
     simpleCheck(ideology, rowObjects[1]);
     complexCheck(factories, rowObjects[2]);
     simpleCheck(continent, rowObjects[3]);
-
 }
 
 function simpleCheck(toCheck, obj) {
@@ -192,7 +173,6 @@ function complexCheck(toCheck, obj) {
             obj.appendChild(arrow);
             changeColour(obj, greyColour);
     }
-
 }
 
 function changeColour(obj, clr) {
@@ -201,13 +181,9 @@ function changeColour(obj, clr) {
     obj.style.borderColor = clr;
 }
 
-
 //get today's game answer
 
-
 function getAnswer() {
-
-
     const curDate = (new Date()).toLocaleDateString('en-US');
 
     console.log(curDate);
@@ -218,3 +194,43 @@ function getAnswer() {
         localStorage.setItem("todays-answer", newCountry);
    }
 }
+
+function endPopup() {
+
+    if(localStorage.getItem("streak") == null) {
+        localStorage.setItem("streak", 0);
+    }
+
+    console.log(currentRow+1)
+
+    let titleText;
+
+    if(wonGame) {
+        titleText = "Good Job!"
+        localStorage.setItem("streak", parseInt(localStorage.getItem("streak"))+1);
+
+
+    } else {
+        titleText = "Nice Try!"
+        localStorage.setItem("streak", 0);
+    }
+
+    const correctAnswer = localStorage.getItem("todays-answer");
+    const popup = document.createElement('div')
+    popup.id = 'popup'
+
+    popup.innerHTML = ` 
+    <svg id="popupClose" xmlns="http://www.w3.org/2000/svg" 
+    height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" onclick="document.getElementById('popup').remove();">
+    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+
+    <h1 id="popupTitle">${titleText}</h1>
+    <h2 id="popupReveal">The answer was ${correctAnswer}</h2>    
+    `;
+
+    document.body.appendChild(popup);
+    const inputBar = document.getElementById("input-bar");
+    inputBar.readOnly = true;
+
+}
+

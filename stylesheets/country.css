@@ -40,7 +40,7 @@ html{
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body{
@@ -191,6 +191,10 @@ body{
 
     .titlebox {
         font-size: 4.5rem;
+    }
+
+    #popup {
+        width: 90%;
     }
 }
 

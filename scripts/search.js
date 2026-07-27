@@ -69,12 +69,13 @@ function updateSelection(matching, input, total) {
             li.innerHTML = `<li>${processedWord}</li>`
             li.addEventListener('click', (event) => {
                 let selectedText = event.target.textContent;
-                window.selected = getSelectedCountry(selectedText);
-                const selectionEvent = new CustomEvent('countrySelection');
-                window.dispatchEvent(selectionEvent);
-                selectionZone.style.visibility = "hidden";
-                inputBar.value = '';
-
+                if(selectedText != null) {
+                    window.selected = getSelectedCountry(selectedText);
+                    const selectionEvent = new CustomEvent('countrySelection');
+                    window.dispatchEvent(selectionEvent);
+                    selectionZone.style.visibility = "hidden";
+                    inputBar.value = '';
+                }
             })
             list.appendChild(li);
         }

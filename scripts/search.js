@@ -1,10 +1,13 @@
 const list = document.getElementById('countries');
 const inputBar = document.getElementById("input-bar");
 const selectionZone = document.getElementById("countries");
+const selectionEvent = new CustomEvent('countrySelection');
 async function loadData() {
     //set up loaded signal thing
     window.countryDataPromise = new Promise((resolve) => {
         window.resolveData = resolve;
+        
+        
     });
         const response = await fetch('./scripts/countries.json');
         window.countryData = await response.json();
@@ -71,7 +74,7 @@ function updateSelection(matching, input, total) {
                 let selectedText = event.target.textContent;
                 if(selectedText != null) {
                     window.selected = getSelectedCountry(selectedText);
-                    const selectionEvent = new CustomEvent('countrySelection');
+                    saveGuesses(selectedText);
                     window.dispatchEvent(selectionEvent);
                     selectionZone.style.visibility = "hidden";
                     inputBar.value = '';
@@ -86,8 +89,16 @@ function getSelectedCountry(txt) {
 
     for(let x of window.countryData) {
         if(x.country == txt) {
-            console.log(x);
+
             return x;
         }
     }
+}
+
+function saveGuesses(guessed) {
+
+    const getSaved = localStorage.getItem("savedGuesses");
+    let savedArray = JSON.parse(getSaved);
+    savedArray.push(guessed);
+    localStorage.setItem("savedGuesses", JSON.stringify(savedArray));
 }

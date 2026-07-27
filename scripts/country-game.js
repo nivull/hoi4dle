@@ -1,6 +1,7 @@
 let answer;
 let currentRow = 0;
 const maxRow = 5;
+const curDate = (new Date()).toLocaleDateString('en-US');
 // box colours
 const greyColour = "#272727";
 const yellowColour = "#bdaa40";
@@ -10,11 +11,10 @@ let wonGame = false;
 const guessDistance = 10;
 async function dataLoaded() {
     await window.countryDataPromise;
-    console.log("Country data loaded");
     getAnswer();
     answer = getCountry(localStorage.getItem("todays-answer"));
+    loadGuesses();
     addEventListener('countrySelection', (event) => {
-        console.log(window.selected)
         if(!wonGame) {
             guess(testBorders(), testIdeology(), testFactories(), testContinent());
         }
@@ -22,9 +22,7 @@ async function dataLoaded() {
         if(wonGame) {
            endPopup();
         }
-         else if(currentRow < maxRow) {
-            currentRow++;
-        } else{
+         else if(currentRow > maxRow) {
             endPopup();
         }
     });
@@ -109,7 +107,7 @@ function testContinent() {
 }
 
 function guess(borders, ideology, factories, continent) {
-
+    
     const rowObjects = [document.getElementById(`c-${currentRow}`),
         document.getElementById(`i-${currentRow}`),
         document.getElementById(`f-${currentRow}`),
@@ -125,6 +123,7 @@ function guess(borders, ideology, factories, continent) {
     simpleCheck(ideology, rowObjects[1]);
     complexCheck(factories, rowObjects[2]);
     simpleCheck(continent, rowObjects[3]);
+    currentRow++;
 }
 
 function simpleCheck(toCheck, obj) {
@@ -184,10 +183,7 @@ function changeColour(obj, clr) {
 //get today's game answer
 
 function getAnswer() {
-    const curDate = (new Date()).toLocaleDateString('en-US');
-
-    console.log(curDate);
-
+    
    if(localStorage.getItem("date") != curDate) {
         localStorage.setItem("date", curDate);
         const newCountry = window.countryData[Math.floor(Math.random() * window.countryData.length - 1) + 1].country;
@@ -200,8 +196,6 @@ function endPopup() {
     if(localStorage.getItem("streak") == null) {
         localStorage.setItem("streak", 0);
     }
-
-    console.log(currentRow+1)
 
     let titleText;
 
@@ -231,6 +225,24 @@ function endPopup() {
     document.body.appendChild(popup);
     const inputBar = document.getElementById("input-bar");
     inputBar.readOnly = true;
+}
 
+//load all the stuff guessed for this day
+function loadGuesses() {
+
+    if(localStorage.getItem("date") != curDate || localStorage.getItem("savedGuesses") == null) {
+        localStorage.setItem("savedGuesses", JSON.stringify([]));
+    } else {
+        console.log(localStorage.getItem("savedGuesses"))
+        const getSaved = localStorage.getItem("savedGuesses");
+        window.savedArray = JSON.parse(getSaved);    
+        for(let countryName of savedArray) {
+            window.selected = getSelectedCountry(countryName);
+            guess(testBorders(), testIdeology(), testFactories(), testContinent());
+        } 
+        if(savedArray.length == maxRow+1) {
+            endPopup();
+        }
+    }
 }
 

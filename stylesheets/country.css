@@ -18,7 +18,6 @@
     width: 100%;
     gap: 5vh;
     height: 100vh;
-    overflow-x: hidden;
 }
 
 #subtitle{
@@ -92,7 +91,7 @@ body{
     flex-direction: column;
     width: 100%;
     position: relative;
-    margin-top: 100px;
+    margin-top: 75px;
 }
 
 #countries{

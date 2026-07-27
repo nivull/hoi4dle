@@ -89,12 +89,13 @@ function testContinent() {
     const guess = window.selected.continent;
 
     const contBorders = {
-        "Europe": "Asia",
-        "Africa": "Asia",
+        "Europe": ["West Asia", "Asia"],
+        "Africa": "West Asia",
         "North America": "South America",
         "South America": "North America",
         "Oceania": "N/A",
-        "Asia": ["Europe", "Africa"]
+        "Asia": "West Asia",
+        "West Asia": ["Europe", "East Asia", "Africa"]
     }
 
     if(ans == guess) {

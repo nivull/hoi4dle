@@ -235,70 +235,70 @@
         "border": ["Greece", "Bulgaria", "Syria", "Soviet Union", "Iran", "Iraq"],
         "ideology": "Non-Aligned",
         "factories": 17,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country":"Syria",
         "border": ["Lebanon", "Iraq", "Turkey", "Jordan", "Palestine"],
         "ideology": "Democracy",
         "factories": 0,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country":"Lebanon",
         "border": ["Syria", "Palestine"],
         "ideology": "Democracy",
         "factories": 1,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country":"Palestine",
         "border": ["Lebanon", "Syria", "Jordan", "United Kingdom"],
         "ideology": "Non-Aligned",
         "factories": 1,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country":"Jordan",
         "border": ["Syria", "Saudi Arabia", "Iraq", "Palestine"],
         "ideology": "Non-Aligned",
         "factories": 1,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country" :"Saudi Arabia",
         "border": ["Iraq", "United Kingdom", "Kuwait", "Jordan", "Oman", "Yemen"],
         "ideology": "Non-Aligned",
         "factories": 3,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country": "Iraq",
         "border": ["Iran", "Syria", "Jordan", "Kuwait", "Turkey"],
         "ideology": "Non-Aligned",
         "factories": 4,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country": "Oman",
         "border": ["Saudi Arabia", "United Kingdom"],
         "ideology": "Non-Aligned",
         "factories": 2,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country": "Yemen",
         "border": ["British Raj", "United Kingdom", "Saudi Arabia"],
         "ideology": "Non-Aligned",
         "factories": 2,
-        "continent": "Asia"
+        "continent": "West Asia"
     },
     {
         "country": "Iran",
         "border": ["Soviet Union", "Afghanistan", "Iraq", "Turkey", "British Raj"],
         "ideology": "Non-Aligned",
         "factories": 7,
-        "continent": "Asia"
+        "continent": "West Asia"
     },  
     {
         "country": "Afghanistan",

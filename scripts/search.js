@@ -86,6 +86,7 @@ function getSelectedCountry(txt) {
 
     for(let x of window.countryData) {
         if(x.country == txt) {
+            console.log(x);
             return x;
         }
     }

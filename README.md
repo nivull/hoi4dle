@@ -44,11 +44,4 @@ West Asia, China, and the rest of Asia are split up because the countries are va
 
 # Other stuff
 
-### Currently only the first game is is made
-
-
-
-
-## known bugs
-Theres some bug that only really happens on mobile but I've seen before on computer where the selection doesn't actully register,
-if that happens just guess again
+### Currently only the first game is made

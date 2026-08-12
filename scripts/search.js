@@ -69,9 +69,9 @@ function updateSelection(matching, input, total) {
             const processedWord = x.country.replace(regex, `<b>$&</b>`);
             const li = document.createElement('li');
             li.className= "selectionOption";
-            li.innerHTML = `<li>${processedWord}</li>`
+            li.innerHTML = processedWord;
             li.addEventListener('click', (event) => {
-                let selectedText = event.target.textContent;
+                let selectedText = event.target.closest('li').textContent;
                 if(selectedText != null) {
                     window.selected = getSelectedCountry(selectedText);
                     saveGuesses(selectedText);

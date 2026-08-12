@@ -333,42 +333,42 @@
         "border": ["Bhutan", "Nepal", "British Raj", "Sichuan Clique", "Yunnan", "Quinghai Ma", "Khotan Ma", "Burma"],
         "ideology": "Non-Aligned",
         "factories": 3,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Sinkiang",
         "border": ["Soviet Union", "Khotan Ma", "British Raj", "Mongolia", "Afghanistan", "Gansu Ma"],
         "ideology": "Communism",
         "factories": 5,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Khotan Ma",
         "border": ["Gansu Ma", "Sinkiang", "Tibet", "Quinghai Ma", "British Raj"],
         "ideology": "Non-Aligned",
         "factories": 0,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Qinghai Ma",
         "border": ["Sichuan Clique", "Northeastern Army", "Tibet", "Gansu Ma", "Khotan Ma"],
         "ideology": "Non-Aligned",
         "factories": 5,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Sichuan Clique",
         "border": ["TIbet", "Yunnan", "Quinghai Ma", "Northeastern Army", "China"],
         "ideology": "Non-Aligned",
         "factories": 5,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Yunnan",
         "border": ["Sichuan Clique", "China", "Guangxi Clique", "France", "Burma", "Tibet"],
         "ideology": "Non-Aligned",
         "factories": 4,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Burma",
@@ -403,63 +403,63 @@
         "border": ["Guangdong Clique", "China", "France", "Yunnan"],
         "ideology": "Non-Aligned",
         "factories": 4,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Guangdong Clique",
         "border": ["United Kingdom", "Guangxi Clique", "China", "Portugal"],
         "ideology": "Non-Aligned",
         "factories": 6,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "China",
         "border": ["Guangdong Clique", "Guangxi Clique", "Sichuan Clique", "Northeastern Army", "Shanxi", "Hebei Chahar", "Shangdong Clique", "Yunnan"],
         "ideology": "Non-Aligned",
         "factories": 21,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Northeastern Army",
         "border": ["Sichuan Clique", "China", "Communist China", "Quinghai Ma", "Ningxia Ma", "Gansu Ma", "Shanxi"],
         "ideology": "Non-Aligned",
         "factories": 5,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Gansu Ma",
         "border": ["Ningxia Ma", "Quinghai Ma", "Northeastern Army", "Khotan Ma", "Sinkiang", "Mongolia"],
         "ideology": "Non-Aligned",
         "factories": 0,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Ningxia  Ma",
         "border": ["Mongolia", "Gansu Ma", "Northeastern Army", "Quinghai Ma", "Shanxi", "Communist China"],
         "ideology": "Non-Aligned",
         "factories": 1,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Communist China",
         "border": ["Northeastern Army", "Shanxi", "Ningxia Ma"],
         "ideology": "Communism",
         "factories": 2,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Shanxi",
         "border": ["Communist China", "China", "Hebei Chahar", "Mengjiang", "Mongolia", "Ningxia Ma"],
         "ideology": "Non-Aligned",
         "factories": 3,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Mongolia",
         "border": ["Tannu Tuva", "Soviet Union", "Sinkiang", "Gansu Ma", "Ningxia Ma", "Shanxi", "Mengjiang", "Manchuko"],
         "ideology": "Communism",
         "factories": 4,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Tannu Tuva",
@@ -473,28 +473,28 @@
         "border": ["Mongolia", "Manchuko", "Shanxi", "Hebei Chahar"],
         "ideology": "Non-Aligned",
         "factories": 3,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Hebei Char",
         "border": ["China", "Japan", "Shangdong Clique", "Shanxi", "Mengjiang"],
         "ideology": "Non-Aligned",
         "factories": 2,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Shangdong Clique",
         "border": ["China", "Hebei Chahar"],
         "ideology": "Non-Aligned",
         "factories": 1,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Manchuko",
         "border": ["Japan", "Soviet Union", "Hebei Chahar", "Mengjiang", "Mongolia"],
         "ideology": "Fascism",
         "factories": 2,
-        "continent": "Asia"
+        "continent": "China"
     },
     {
         "country": "Japan",

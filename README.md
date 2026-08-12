@@ -29,18 +29,22 @@ Yellow = Close (Explained below)
 
 >West Asia: Europe, Africa, Asia
 
+>Asia: West Asia, China
+
+>China: Asia
+
 >Europe: West Asia, Asia
 
 >Africa: West Asia
 
 >Oceania: None
 
-West & East Asia are split up because the countries are vastly too similar, and there are way too many (why did they even add so many useless Chinese warlord lmao)
+West Asia, China, and the rest of Asia are split up because the countries are vastly too similar, and there are way too many (why did they even add so many useless Chinese warlord lmao)
 
 
 # Other stuff
 
-### Currently only the first gamemide is made
+### Currently only the first game is is made
 
 
 

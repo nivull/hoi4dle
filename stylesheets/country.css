@@ -193,9 +193,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.1rem;
     transition: 0.1s ease-in-out;
-    width: 20%;
+    width: 24%;
     z-index: 10;
     position: absolute;
     top: 20%;
@@ -205,12 +205,37 @@ body{
 #popupClose{
 
     position: absolute;
-    top: 7%;
+    top: 5%;
     right: 5%;
     transform: scale(1.5);
     cursor: pointer;
 
 }
+
+#replay-button {
+
+    padding: 0.8rem 0rem 0.8rem 0rem;
+    background-color: var(--secondary-color);
+    border: solid 3px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    width: 80%;
+    background-color: var(--selected-color);
+    font-size: 1.4em;
+    font-weight: bolder;
+    color: var(--primary-color);
+
+}
+
+#replay-button:hover {
+    transform:scale(1.05);
+}
+
+
 
 @media (max-width:  480px) {
 
@@ -232,4 +257,16 @@ body{
     #input-bar{
         margin-top: 0;
     }
+
+    .wrapper{
+        overflow-x: hidden;
+
+    }
+    #replay-button{
+        width: 90%;
+    }
+    #popupClose{
+        top: 10px;
+    }
 }
+

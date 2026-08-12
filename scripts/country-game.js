@@ -7,6 +7,15 @@ const greyColour = "#272727";
 const yellowColour = "#bdaa40";
 const greenColour = "#409c34e8";
 let wonGame = false;
+let sessionGivesStreak = true;
+
+if(localStorage.getItem("streak") == null) {
+    localStorage.setItem("streak", 0);
+}
+
+if(localStorage.getItem("date") == null) {
+    localStorage.setItem("date", "/");
+}
 
 const guessDistance = 10;
 async function dataLoaded() {
@@ -14,16 +23,21 @@ async function dataLoaded() {
     getAnswer();
     answer = getCountry(localStorage.getItem("todays-answer"));
     loadGuesses();
+    if(wonGame) {     
+        endPopup();
+    }
+
     addEventListener('countrySelection', (event) => {
+        console.log(currentRow)
+        console.log(maxRow)        
         if(!wonGame) {
-            guess(testBorders(), testIdeology(), testFactories(), testContinent());
+            guess(testBorders(false), testIdeology(), testFactories(), testContinent());
         }
-            
-        if(wonGame) {
-           endPopup();
-        }
-         else if(currentRow > maxRow) {
+        if(currentRow > maxRow) {
             endPopup();
+        }
+        if(wonGame) {     
+        endPopup();
         }
     });
 }
@@ -39,11 +53,14 @@ function getCountry(txt) {
     }
 }
 
-function testBorders() {
+function testBorders(loadingGuesses) {
 
         if(window.selected.country == answer.country) {
             //if correct
             wonGame = true;
+            if(!loadingGuesses && sessionGivesStreak){
+                localStorage.setItem("streak", parseInt(localStorage.getItem("streak"))+1);
+            }
             return 2;
         } else if(window.selected.border.includes(answer.country)){
             //if bordering
@@ -94,8 +111,9 @@ function testContinent() {
         "North America": "South America",
         "South America": "North America",
         "Oceania": "N/A",
-        "Asia": "West Asia",
-        "West Asia": ["Europe", "East Asia", "Africa"]
+        "Asia": ["West Asia", "China"],
+        "West Asia": ["Europe", "Asia", "Africa"],
+        "China": "Asia"
     }
 
     if(ans == guess) {
@@ -107,7 +125,7 @@ function testContinent() {
     }
 }
 
-function guess(borders, ideology, factories, continent) {
+function guess(borders, ideology, factories, continent, automatic) {
     
     const rowObjects = [document.getElementById(`c-${currentRow}`),
         document.getElementById(`i-${currentRow}`),
@@ -186,7 +204,12 @@ function changeColour(obj, clr) {
 function getAnswer() {
     
    if(localStorage.getItem("date") != curDate) {
-        localStorage.setItem("date", curDate);
+        if(localStorage.getItem("date").includes("/")) {
+            sessionGivesStreak = true;
+        } else {
+            sessionGivesStreak = false;
+        }
+
         const newCountry = window.countryData[Math.floor(Math.random() * window.countryData.length - 1) + 1].country;
         localStorage.setItem("todays-answer", newCountry);
    }
@@ -194,20 +217,15 @@ function getAnswer() {
 
 function endPopup() {
 
-    if(localStorage.getItem("streak") == null) {
-        localStorage.setItem("streak", 0);
-    }
-
     let titleText;
 
     if(wonGame) {
         titleText = "Good Job!"
-        localStorage.setItem("streak", parseInt(localStorage.getItem("streak"))+1);
-
-
     } else {
         titleText = "Nice Try!"
-        localStorage.setItem("streak", 0);
+        if(sessionGivesStreak) {   
+            localStorage.setItem("streak", 0);
+        } 
     }
 
     const correctAnswer = localStorage.getItem("todays-answer");
@@ -220,7 +238,11 @@ function endPopup() {
     <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
 
     <h1 id="popupTitle">${titleText}</h1>
+    
     <h2 id="popupReveal">The answer was ${correctAnswer}</h2>    
+    <h3 style="position: relative">Current Streak: ${localStorage.getItem("streak")}🔥</h3>
+    <button type="button" id="replay-button" onclick="playAgain()">Play Again Today?</button>
+    <p style="padding-inline: 10%">(Playing more than once in a day does not contribute to your streak)</p>
     `;
 
     document.body.appendChild(popup);
@@ -228,18 +250,26 @@ function endPopup() {
     inputBar.readOnly = true;
 }
 
+//play again within same day
+function playAgain() {
+    localStorage.setItem("date", Math.random());
+    window.location.reload();
+}
+
+
+
 //load all the stuff guessed for this day
 function loadGuesses() {
-
+    console.log(curDate);
     if(localStorage.getItem("date") != curDate || localStorage.getItem("savedGuesses") == null) {
+        localStorage.setItem("date", curDate);
         localStorage.setItem("savedGuesses", JSON.stringify([]));
     } else {
-        console.log(localStorage.getItem("savedGuesses"))
         const getSaved = localStorage.getItem("savedGuesses");
         window.savedArray = JSON.parse(getSaved);    
         for(let countryName of savedArray) {
             window.selected = getSelectedCountry(countryName);
-            guess(testBorders(), testIdeology(), testFactories(), testContinent());
+            guess(testBorders(true), testIdeology(), testFactories(), testContinent(), true);
         } 
         if(savedArray.length == maxRow+1) {
             endPopup();

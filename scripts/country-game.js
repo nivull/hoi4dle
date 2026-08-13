@@ -8,6 +8,10 @@ const yellowColour = "#bdaa40";
 const greenColour = "#409c34e8";
 let wonGame = false;
 let sessionGivesStreak = true;
+if(localStorage.getItem("resetDate") == curDate) {
+    sessionGivesStreak = false;
+    console.log("reset")
+}
 
 if(localStorage.getItem("streak") == null) {
     localStorage.setItem("streak", 0);
@@ -202,17 +206,10 @@ function changeColour(obj, clr) {
 //get today's game answer
 
 function getAnswer() {
-    
-   if(localStorage.getItem("date") != curDate) {
-        if(localStorage.getItem("date").includes("/")) {
-            sessionGivesStreak = true;
-        } else {
-            sessionGivesStreak = false;
-        }
-
+    if(localStorage.getItem("date") != curDate){
         const newCountry = window.countryData[Math.floor(Math.random() * window.countryData.length - 1) + 1].country;
         localStorage.setItem("todays-answer", newCountry);
-   }
+    }
 }
 
 function endPopup() {
@@ -252,7 +249,8 @@ function endPopup() {
 
 //play again within same day
 function playAgain() {
-    localStorage.setItem("date", Math.random());
+    localStorage.setItem("resetDate", curDate);
+    localStorage.setItem("date", "reset");
     window.location.reload();
 }
 

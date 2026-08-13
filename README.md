@@ -5,7 +5,7 @@ A guessing game for Hearts of Iron 4
 
 # General Guide
 
-The obious stuff:
+The obvious stuff:
 Green = Correct/Exact
 Yellow = Close (Explained below)
 
@@ -39,7 +39,7 @@ Yellow = Close (Explained below)
 
 >Oceania: None
 
-West Asia, China, and the rest of Asia are split up because the countries are vastly too similar, and there are way too many (why did they even add so many useless Chinese warlord lmao)
+West Asia, China, and the rest of Asia are split up because the countries are vastly too similar, and there are way too many (why did they even add so many useless Chinese warlords lmao)
 
 
 # Other stuff
